@@ -15,7 +15,7 @@ RUN yum -y install epel-release &&\
                 zlib zlib-static zlib-devel bzip2 bzip2-devel ncurses ncurses-devel \
                 libjpeg libjpeg-devel expat expat-devel gettext gettext-devel openssl openssl-devel \
                 freetype freetype-devel libpng libpng-devel libtiff libtiff-devel openjpeg openjpeg-devel \
-                perl-devel python-devel libffi devel-libffi libpng12 netcdf \
+                perl-devel python-devel libffi devel-libffi libpng12 \
                 lsof net-tools sysstat  &&\
     yum install -y netcdf netcdf-devel hdf5 hdf hdf-devel \
                netcdf4-python geos-devel \
