@@ -19,10 +19,7 @@ RUN yum -y install epel-release &&\
                 lsof net-tools sysstat lsyncd &&\
     yum clean all
 
-RUN systemctl enable lsyncd.service
-
 USER root
 ADD ./ /tmp/install
 RUN /tmp/install/install.sh
 
-RUN systemctl enable fcron.service
