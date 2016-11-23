@@ -19,7 +19,7 @@ curl -L -o netcdf-4.3.3.tar.gz ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4.3.
 curl -L -o hdf5-1.8.16.tar.gz http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.16/src/hdf5-1.8.16.tar.gz
 export CC=gcc && export FC=gfortran && make USE_IPOLATES=1 USE_NETCDF4=1 USE_NETCDF3=0
 mv wgrib2 /usr/local/
-ln -s /usr/local/wgrib2/wgrib2 /usr/local/bin/
+ln -s /usr/local/wgrib2/wgrib2 /usr/bin/
 cd "$BASEDIR"
 
 echo '--- cleaning up ----'
