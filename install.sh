@@ -1,5 +1,15 @@
 set -ev
 
+
+echo "-----------------Install dumb-init -----------------"
+cd /tmp
+curl -LO https://github.com/Yelp/dumb-init/archive/v1.2.0.tar.gz
+tar -xvf v1.2.0.tar.gz
+cd dumb-init-1.2.0
+make
+cp dumb-init /usr/bin/
+
+
 echo "-----------------Install fcron ------------------------------"
 cd /tmp
 curl -L -o fcron.tar.gz http://fcron.free.fr/archives/fcron-3.2.0.src.tar.gz
@@ -19,8 +29,8 @@ curl -L -o netcdf-4.3.3.tar.gz ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4.3.
 curl -L -o hdf5-1.8.16.tar.gz http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.16/src/hdf5-1.8.16.tar.gz
 export CC=gcc && export FC=gfortran && make USE_IPOLATES=1 USE_NETCDF4=1 USE_NETCDF3=0
 mv wgrib2 /usr/local/
-ln -s /usr/local/wgrib2/wgrib2 /usr/bin/
-cd "$BASEDIR"
+ln -s /usr/local/wgrib2/wgrib2 /usr/bin
+
 
 echo '--- cleaning up ----'
 rm -rf /tmp/*

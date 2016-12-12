@@ -23,4 +23,3 @@ RUN yum -y install epel-release &&\
 USER root
 ADD ./ /tmp/install
 RUN /tmp/install/install.sh
-
